@@ -51,7 +51,7 @@ jobs:
       - name: Publish to CurseForge
         uses: Kir-Antipov/mc-publish@v3.3
         with:
-          curseforge-id: 1379024
+          curseforge-id: 1379091
           curseforge-token: ${{ secrets.CURSEFORGE_TOKEN }}
 
           modrinth-id: d3ySFbJG
