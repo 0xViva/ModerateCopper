@@ -53,5 +53,9 @@ jobs:
         with:
           curseforge-id: 1379024
           curseforge-token: ${{ secrets.CURSEFORGE_TOKEN }}
+
+          modrinth-id: d3ySFbJG
+          modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
+
           github-token: ${{ secrets.GITHUB_TOKEN }}
           file: ./build/libs/*.jar
