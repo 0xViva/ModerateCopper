@@ -3,7 +3,9 @@
 
 Changes Minecraft's Copper Ore's Raw Copper uniform output from [3 to 5] down to just [1], same as iron ores.
 
-This is done by overwriting the loot table for the block `minecraft:blocks/copper_ore` and `minecraft:blocks/copper_ore`
+This is done by overwriting the `data/minecraft/loot_table` json for the blocks `minecraft:blocks/copper_ore` and `minecraft:blocks/copper_ore`
 
-Data for this loot table is made using a data provider from the Minecraft modding API NeoForged.
+The tweaked loot table is generated using a data provider from the Minecraft modding API NeoForged.
+
+https://docs.neoforged.net/docs/resources/server/loottables/
 
