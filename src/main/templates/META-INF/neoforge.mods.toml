@@ -4,20 +4,14 @@ license="${mod_license}"
 modId="${mod_id}" #mandatory
 version="${mod_version}" #mandatory
 displayName="${mod_name}" #mandatory
-
 # A URL to query for updates for this mod. See the JSON update specification https://docs.neoforged.net/docs/misc/updatechecker/
 #updateJSONURL="https://change.me.example.invalid/updates.json" #optional
-
 displayURL="https://github.com/0xViva/ModerateCopper"
-
 logoFile="logo.png"
-
 #credits="" #optional
-
 authors="${mod_authors}" #optional
-
 description='''${mod_description}'''
-
+showAsDataPack=true
 
 [[dependencies.${mod_id}]] #optional
     modId="neoforge" #mandatory
