@@ -53,6 +53,11 @@ neoForge {
             logLevel = org.slf4j.event.Level.DEBUG
         }
     }
+
+    jar {
+    exclude '**/.cache/**'
+}
+
 sourceSets.main.resources { srcDir 'src/generated/resources' }
 
     mods {
