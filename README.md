@@ -1,7 +1,7 @@
 # Moderate Copper
 `mod_description=Have a moderate amount of copper in the game.`
 
-Reduces Minecraft's Copper Ore output from between 3 to 5 down to just 1 like iron ores.
+Changes Minecraft's Copper Ore's Raw Ore uniform output from between 3 to 5 down to just 1, same as iron ores.
 
 This is done by overwriting the loot table for the block `minecraft:blocks/copper_ore` and `minecraft:blocks/copper_ore`
 
