@@ -2,7 +2,7 @@ license="${mod_license}"
 
 [[mods]] #mandatory
 modId="${mod_id}" #mandatory
-version="${mod_version}-neoforge"    # mandatory
+version="${mod_version}"    # mandatory
 displayName="${mod_name}" 
 displayURL="https://github.com/0xViva/ModerateCopper"
 logoFile="logo.png"
