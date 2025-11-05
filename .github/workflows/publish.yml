@@ -2,9 +2,8 @@ name: Build and Publish Mod
 
 on:
   workflow_dispatch:
-  push:
-    tags:
-      - 'v*.*.*'  # Triggers on tags like v1.2.3
+  release:
+    types: [published] 
 
 jobs:
   build:
