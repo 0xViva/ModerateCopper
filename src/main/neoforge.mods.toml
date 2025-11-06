@@ -24,4 +24,3 @@ showAsDataPack=true
     versionRange="${minecraft_version_range}"
     ordering="NONE"
     side="BOTH"
-

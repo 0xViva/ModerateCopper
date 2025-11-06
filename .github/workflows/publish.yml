@@ -32,6 +32,12 @@ jobs:
       - name: Build with Gradle
         run: ./gradlew build
 
+      - name: runData with Gradle
+        run: ./gradlew runData
+
+      - name: run Game Tests with Gradle
+        run: ./gradlew runGametest
+
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
         with:

@@ -1,0 +1,44 @@
+
+name: Build and Test
+
+on:
+  push:
+    # Only on branches, not tags/releases
+    branches:
+      - '**'
+  pull_request:
+    branches:
+      - '*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    outputs:
+      build-artifact: ${{ steps.build-artifact.outputs.path }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          fetch-tags: true
+
+      - name: Setup JDK 21
+        uses: actions/setup-java@v4
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v4
+
+      - name: Make Gradle wrapper executable
+        run: chmod +x ./gradlew
+
+      - name: runData with Gradle
+        run: ./gradlew runData
+
+      - name: Build with Gradle
+        run: ./gradlew build
+
+      - name: run Game Tests with Gradle
+        run: ./gradlew runGametest
