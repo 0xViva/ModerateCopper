@@ -28,12 +28,12 @@ jobs:
 
       - name: Make Gradle wrapper executable
         run: chmod +x ./gradlew
+      
+      - name: runData with Gradle
+        run: ./gradlew runData
 
       - name: Build with Gradle
         run: ./gradlew build
-
-      - name: runData with Gradle
-        run: ./gradlew runData
 
       - name: run Game Tests with Gradle
         run: ./gradlew runGametest
