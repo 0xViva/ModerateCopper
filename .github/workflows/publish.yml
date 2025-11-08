@@ -54,7 +54,16 @@ jobs:
           name: build
           path: ./build/libs
 
-      - name: Publish to CurseForge and Modrinth
+      - name: Extract version from JAR filename
+        id: get_version
+        run: |
+          jar=$(ls ./build/libs/*.jar | head -n1)
+          base=$(basename "$jar" .jar)
+          version="${base##*-}"
+          echo "VERSION=$version" >> $GITHUB_ENV
+          echo "::set-output name=name::$version"  
+
+      - name: Publish to CurseForge and Modrinth + Release to Github.
         uses: Kir-Antipov/mc-publish@v3.3
         with:
           curseforge-id: 1379091
@@ -63,4 +72,6 @@ jobs:
           modrinth-id: d3ySFbJG
           modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
 
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           file: ./build/libs/*.jar
+          name: Moderate Copper ${{ steps.get_version.outputs.name }}
