@@ -1,4 +1,4 @@
-name: Build, Publish and Release Mod
+name: Publish+Release Mod
 
 on:
   workflow_dispatch:
@@ -56,7 +56,7 @@ jobs:
           name: build
           path: ./build/libs
 
-      - name: Publish to CurseForge
+      - name: Publish to CurseForge and Modrinth + Release to Github.
         uses: Kir-Antipov/mc-publish@v3.3
         with:
           curseforge-id: 1379091
