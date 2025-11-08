@@ -10,7 +10,7 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
 
-@EventBusSubscriber(modid = ModerateCopper.MODID)
+@EventBusSubscriber(modid = ModerateCopper.MODID, bus = EventBusSubscriber.Bus.MOD)
 public class ModDataGenerator {
 
   @SubscribeEvent
