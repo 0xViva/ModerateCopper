@@ -1,7 +1,9 @@
-name: Publish Mod
+name: Publish+Release Mod
 
 on:
   workflow_dispatch:
+  release:
+    types: [ published ]
 
 jobs:
   build:
@@ -54,7 +56,7 @@ jobs:
           name: build
           path: ./build/libs
 
-      - name: Publish to CurseForge and Modrinth
+      - name: Publish to CurseForge and Modrinth + Release to Github.
         uses: Kir-Antipov/mc-publish@v3.3
         with:
           curseforge-id: 1379091
@@ -63,4 +65,5 @@ jobs:
           modrinth-id: d3ySFbJG
           modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
 
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           file: ./build/libs/*.jar
