@@ -1,7 +1,9 @@
-name: Build and Publish Mod
+name: Build, Publish and Release Mod
 
 on:
   workflow_dispatch:
+  release:
+    types: [ published ]
 
 jobs:
   build:
@@ -63,4 +65,5 @@ jobs:
           modrinth-id: d3ySFbJG
           modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
 
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           file: ./build/libs/*.jar
