@@ -1,8 +1,11 @@
 package dev.oxviva.moderatecopper;
 
-import net.neoforged.fml.common.Mod;
+import net.fabricmc.api.ModInitializer;
 
-@Mod(ModerateCopper.MODID)
-public class ModerateCopper {
-  public static final String MODID = "moderatecopper";
+public class ModerateCopper implements ModInitializer {
+  public static final String MOD_ID = "moderatecopper";
+
+  @Override
+  public void onInitialize() {}
 }
+

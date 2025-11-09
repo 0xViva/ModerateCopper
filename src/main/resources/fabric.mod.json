@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "moderatecopper",
+  "version": "${version}",
+  "name": "Moderate Copper",
+  "description": "Have a more moderate amount of raw copper output in the game! Same as iron ores.",
+  "authors": ["0xViva"],
+  "contact": {
+    "homepage": "https://github.com/0xViva/ModerateCopper",
+    "sources": "https://github.com/0xViva/ModerateCopper"
+  },
+  "license": "MIL License",
+  "icon": "logo.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": ["dev.oxviva.moderatecopper.ModerateCopper"],
+    "fabric-datagen": ["dev.oxviva.moderatecopper.datagen.ModDataGenerator"]
+  },
+  "depends": {
+    "fabricloader": ">=0.16.0",
+    "minecraft": "~1.21.1",
+    "java": ">=21",
+    "fabric-api": "*"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
