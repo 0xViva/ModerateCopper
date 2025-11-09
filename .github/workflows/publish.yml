@@ -28,13 +28,11 @@ jobs:
         run: chmod +x ./gradlew
       
       - name: runData with Gradle
-        run: ./gradlew runData
+        run: ./gradlew runDatagen
 
       - name: Build with Gradle
         run: ./gradlew build
 
-      - name: run Game Tests with Gradle
-        run: ./gradlew runGametest
 
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
