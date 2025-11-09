@@ -75,5 +75,5 @@ jobs:
           modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
 
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          file: ./build/libs/*.jar
+          files: ./build/libs/*.jar
           name: Moderate Copper ${{ steps.get_version.outputs.name }}
